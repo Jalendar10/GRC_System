@@ -162,18 +162,8 @@ for i, (label, bg, col) in enumerate(nodes):
             arrowprops=dict(arrowstyle="-|>", color=GREY, lw=2.0),
             zorder=8)
 
-# Feedback arc arrow
-end_x   = sx0 + len(nodes) * (nw + ng) - ng - 0.05
-start_x2 = sx0 + 0.05
-arc_y   = ny0 - 0.08
-ax.annotate("",
-    xy=(start_x2, arc_y), xytext=(end_x, arc_y),
-    arrowprops=dict(arrowstyle="-|>", color=AMBER, lw=2.5,
-                    connectionstyle="arc3,rad=0.45"),
-    zorder=8)
-
 t(8, 13.44,
-  "Repeats every quarter automatically  — always audit-ready, zero manual effort",
+  "Repeats every quarter automatically  —  always audit-ready, zero manual effort",
   sz=12.5, c=AMBER)
 
 hr(13.20)
@@ -340,8 +330,7 @@ tags = ("#GRC  #Compliance  #AI  #RegTech  #FinTech  "
         "#SOC2  #ISO27001  #OpenSource  #DevSecOps  #AlwaysAuditReady")
 t(8, 1.15, tags, sz=10.5, c=GREY)
 
-t(15.5, 2.08, "FastAPI + React + AI", sz=11, c=GREY,  ha="right")
-t(15.5, 1.65, "Built with Claude AI", sz=11, c=BLUE,  ha="right")
+t(15.5, 2.08, "FastAPI + React + AI", sz=11, c=GREY, ha="right")
 
 t(8, 0.55,
   "Instead of waiting for the year-end audit — this system makes every quarter a clean audit.",
