@@ -12,6 +12,10 @@
 
 ---
 
+![GRC System Infographic](GRC_System_Infographic.png)
+
+---
+
 > **The Problem:** Companies wait 12 months between audits, then scramble for weeks, pay huge fines, and fail compliance checks they could have caught on Day 1.
 >
 > **The Solution:** Automated quarterly audits run continuously in the background. Every control is tested, every risk is scored, every gap is surfaced — automatically. By the time the annual regulator audit arrives, you've already passed it four times.
