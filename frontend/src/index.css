@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    @apply bg-slate-950 text-slate-100 font-sans antialiased;
+    margin: 0;
+  }
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-900;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-700 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-500;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-slate-900 border border-slate-800 rounded-xl p-6;
+  }
+  .card-sm {
+    @apply bg-slate-900 border border-slate-800 rounded-xl p-4;
+  }
+  .badge {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  .btn {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg font-medium text-sm transition-all duration-150 cursor-pointer;
+  }
+  .btn-primary {
+    @apply btn bg-brand-600 hover:bg-brand-500 text-white;
+  }
+  .btn-secondary {
+    @apply btn bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700;
+  }
+  .btn-danger {
+    @apply btn bg-red-900/50 hover:bg-red-800 text-red-300 border border-red-800;
+  }
+  .input {
+    @apply bg-slate-800 border border-slate-700 rounded-lg px-3 py-2 text-sm text-slate-100
+           placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent
+           transition-all duration-150;
+  }
+  .select {
+    @apply input cursor-pointer;
+  }
+  .table-row-hover {
+    @apply hover:bg-slate-800/50 transition-colors duration-100;
+  }
+  .stat-card {
+    @apply card flex flex-col gap-1;
+  }
+  .section-title {
+    @apply text-lg font-semibold text-slate-100;
+  }
+  .label {
+    @apply text-xs font-medium text-slate-400 uppercase tracking-wider;
+  }
+}
+
+/* Recharts overrides */
+.recharts-tooltip-wrapper .recharts-default-tooltip {
+  @apply !bg-slate-800 !border-slate-700 !rounded-lg;
+}
+.recharts-tooltip-label {
+  @apply !text-slate-300;
+}
+
+/* Animated gradient border for critical alerts */
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.alert-critical {
+  background: linear-gradient(135deg, #7f1d1d, #1e1b4b);
+  animation: gradientShift 4s ease infinite;
+  background-size: 200% 200%;
+}
+
+/* Code block */
+.code-block {
+  @apply font-mono text-xs bg-slate-950 border border-slate-800 rounded-lg p-4 overflow-x-auto;
+  color: #a5f3fc;
+}

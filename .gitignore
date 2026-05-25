@@ -1,0 +1,63 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Environment / Secrets ─────────────────────────────────────────────────────
+backend/.env
+.env
+.env.local
+.env.*.local
+*.env
+
+# ── Database (SQLite) ─────────────────────────────────────────────────────────
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# ── Node / Frontend ───────────────────────────────────────────────────────────
+node_modules/
+frontend/dist/
+frontend/build/
+.npm
+npm-debug.log*
+yarn-error.log*
+
+# ── IDE / Editor ──────────────────────────────────────────────────────────────
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+*.suo
+.vs/
+Thumbs.db
+
+# ── Logs ──────────────────────────────────────────────────────────────────────
+*.log
+logs/
+celerybeat-schedule
+
+# ── ChromaDB ─────────────────────────────────────────────────────────────────
+chroma_data/
+
+# ── Test / Coverage ───────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# ── Claude ────────────────────────────────────────────────────────────────────
+frontend/.claude/

@@ -1,0 +1,84 @@
+# GRC-as-Code: PCI-DSS v4.0 Framework Definition
+framework:
+  id: pci-dss-v4
+  name: Payment Card Industry Data Security Standard
+  version: "4.0"
+  effective_date: 2024-03-31
+  applicable_to:
+    - organizations storing, processing, or transmitting cardholder data
+
+requirements:
+  - req: "1"
+    title: Install and Maintain Network Security Controls
+    controls:
+      - ref: "1.1"
+        desc: Processes and mechanisms for installing and maintaining network security controls are defined and understood
+        mapped_control_ids: [CTRL-NET-001, CTRL-CHG-001]
+      - ref: "1.2"
+        desc: Network security controls (NSCs) are configured and maintained
+        mapped_control_ids: [CTRL-NET-001]
+
+  - req: "2"
+    title: Apply Secure Configurations to All System Components
+    controls:
+      - ref: "2.2"
+        desc: System components are configured and managed securely
+        mapped_control_ids: [CTRL-VM-001, CTRL-CHG-001]
+
+  - req: "3"
+    title: Protect Stored Account Data
+    controls:
+      - ref: "3.4"
+        desc: Primary account numbers (PAN) are secured wherever stored
+        mapped_control_ids: [CTRL-ENC-001, CTRL-DLP-001]
+      - ref: "3.6"
+        desc: Cryptographic keys used to protect stored account data are secured
+        mapped_control_ids: [CTRL-ENC-001]
+
+  - req: "4"
+    title: Protect Cardholder Data with Strong Cryptography During Transmission
+    controls:
+      - ref: "4.2"
+        desc: PAN is protected with strong cryptography during transmission over open, public networks
+        mapped_control_ids: [CTRL-ENC-002]
+
+  - req: "6"
+    title: Develop and Maintain Secure Systems and Software
+    controls:
+      - ref: "6.5"
+        desc: Changes to all system components are managed securely
+        mapped_control_ids: [CTRL-CHG-001]
+
+  - req: "8"
+    title: Identify Users and Authenticate Access to System Components
+    controls:
+      - ref: "8.2"
+        desc: User identification and related accounts for users and administrators are strictly managed throughout an account's lifecycle
+        mapped_control_ids: [CTRL-IAM-001, CTRL-IAM-002]
+      - ref: "8.3"
+        desc: User authentication is established via unique passwords/passphrases or other means
+        mapped_control_ids: [CTRL-IAM-002]
+      - ref: "8.4"
+        desc: Multi-factor authentication (MFA) is implemented to secure access into the CDE
+        mapped_control_ids: [CTRL-IAM-003]
+
+  - req: "10"
+    title: Log and Monitor All Access to System Components and Cardholder Data
+    controls:
+      - ref: "10.2"
+        desc: Audit logs are implemented to support the detection of anomalies and suspicious activity, and the forensic analysis of events
+        mapped_control_ids: [CTRL-LOG-001]
+
+  - req: "11"
+    title: Test Security of Systems and Networks Regularly
+    controls:
+      - ref: "11.3"
+        desc: External and internal vulnerabilities are regularly identified, prioritized, and addressed
+        mapped_control_ids: [CTRL-VM-001]
+
+  - req: "12"
+    title: Support Information Security with Organizational Policies and Programs
+    controls:
+      - ref: "12.4"
+        desc: PCI DSS compliance is managed
+        mapped_control_ids: [CTRL-VEN-001]
